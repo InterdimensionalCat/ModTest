@@ -32,7 +32,7 @@ public class DataBlock extends Block implements ITileEntityProvider {
     public DataBlock() {
         super(Material.ROCK);
         setUnlocalizedName(modClass.MODID + ".DataBlock");
-        setRegistryName("DataBlock");
+        setRegistryName("datablock");
         this.setCreativeTab(CreativeTabs.MISC);
     }
 

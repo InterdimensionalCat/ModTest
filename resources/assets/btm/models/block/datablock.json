@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "btm:blocks/blocktexture",
+    "down": "btm:blocks/blocktexture",
+    "up": "btm:blocks/blocktexture",
+    "east": "btm:blocks/blocktexture",
+    "west": "btm:blocks/blocktexture",
+    "north": "btm:blocks/datablocktexture",
+    "south": "btm:blocks/blocktexture"
+  }
+}

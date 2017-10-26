@@ -61,5 +61,7 @@ public class CommonProxy {
     {
             ModelLoader.setCustomModelResourceLocation(FirstItem.ObsidianIngot, 0, new ModelResourceLocation(FirstItem.ObsidianIngot.getRegistryName() + "_" , "inventory"));
     }
+   
+
            
 }

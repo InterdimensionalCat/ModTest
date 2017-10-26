@@ -9,17 +9,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModBlocks {
 
-    @ObjectHolder("btm:SmoothObsidian")
+    @ObjectHolder("btm:smoothobsidian")
     public static FirstBlock SmoothObsidian = new FirstBlock();
 
 
 
-    @ObjectHolder("btm:DataBlock")
+    @ObjectHolder("btm:datablock")
     public static DataBlock DataBlock = new DataBlock();  
 
 
     @SideOnly(Side.CLIENT)
     public static void initModels() {
     	DataBlock.initModel();
+    	SmoothObsidian.initModel();
     }
 }
