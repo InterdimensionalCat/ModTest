@@ -1,0 +1,16 @@
+[
+{
+  "modid": "btm",
+  "name": "test",
+  "description": "Who Knows.",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["benthom123"],
+  "credits": "LMAO",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
