@@ -12,9 +12,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class FirstItem extends Item {
 
-    protected String name;
-    
-	public static final Item ObsidianIngot = null;
 	public FirstItem() {
 
 		setRegistryName("obsidianingot");        // The unique name (within your mod) that identifies this item

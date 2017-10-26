@@ -55,13 +55,5 @@ public class CommonProxy {
     	  event.getRegistry().register(new ItemBlock(ModBlocks.SmoothObsidian).setRegistryName(ModBlocks.SmoothObsidian.getRegistryName()));
     	  event.getRegistry().register(new FirstItem());
     	  event.getRegistry().register(new ItemBlock(ModBlocks.DataBlock).setRegistryName(ModBlocks.DataBlock.getRegistryName()));
-    }
-    
-    public void model(ModelRegistryEvent e)
-    {
-            ModelLoader.setCustomModelResourceLocation(FirstItem.ObsidianIngot, 0, new ModelResourceLocation(FirstItem.ObsidianIngot.getRegistryName() + "_" , "inventory"));
-    }
-   
-
-           
+    }            
 }

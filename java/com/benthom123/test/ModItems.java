@@ -9,7 +9,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
 
-    @ObjectHolder("btm:ObsidianIngot")
+    @ObjectHolder("btm:obsidianingot")
     public static FirstItem ObsidianIngot = new FirstItem();
      
     
