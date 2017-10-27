@@ -63,7 +63,7 @@ public class DataBlock extends Block implements ITileEntityProvider {
                 } else {
                     counter = getTE(world, pos).increment();
                 }
-                TextComponentTranslation component = new TextComponentTranslation("message.modClass.counter_par", counter);
+                TextComponentTranslation component = new TextComponentTranslation("message.btm.counter_par", counter);
                 component.getStyle().setColor(TextFormatting.GREEN);
                 player.sendStatusMessage(component, false);
             }
