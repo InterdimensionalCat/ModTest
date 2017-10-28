@@ -15,7 +15,7 @@ public class ModBlocks {
 
 
     @ObjectHolder("btm:datablock")
-    public static DataBlock DataBlock = new DataBlock();  
+    public static DataBlock DataBlock = new DataBlock();
 
 
     @SideOnly(Side.CLIENT)

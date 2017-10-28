@@ -14,7 +14,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class FirstBlock extends Block {
     public FirstBlock() {
         super(Material.ROCK);
-        setUnlocalizedName(modClass.MODID + ".SmoothObsidian");     // Used for localization (en_US.lang)
+        setUnlocalizedName(modClass.MODID + ".smoothobsidian");     // Used for localization (en_US.lang)
         setRegistryName("smoothobsidian");        // The unique name (within your mod) that identifies this block
         this.setCreativeTab(CreativeTabs.MISC);
     }

@@ -1,1 +1,13 @@
+
+language.name=English
+language.region=United States
+language.code=en_us
+
 message.btm.counter_par=Counter: %d
+
+item.btm.obsidianingot.name=Obsidian Ingot
+item.btm.obsidianpickaxe.name=Obsidian Pickaxe
+item.btm.obsidiansword.name=Obsidian Sword
+
+tile.btm.datablock.name=Counter
+tile.btm.smoothobsidian.name=Smooth Obsidian

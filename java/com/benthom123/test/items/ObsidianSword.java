@@ -1,24 +1,24 @@
 package com.benthom123.test.items;
 
 import com.benthom123.test.modClass;
-import com.benthom123.test.proxy.CommonProxy;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemSword;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class FirstItem extends Item {
+public class ObsidianSword extends ItemSword {
 
-	public FirstItem() {
-
-		setRegistryName("obsidianingot");        // The unique name (within your mod) that identifies this item
-        setUnlocalizedName(modClass.MODID + ".obsidianingot");     // Used for localization (en_US.lang)
+	public ObsidianSword(String registryName, ToolMaterial material) {
+		super(material);
+		setRegistryName(registryName);     
+        setUnlocalizedName(modClass.MODID + "." + registryName);
         this.setCreativeTab(CreativeTabs.MISC);
-    }
-    @SideOnly(Side.CLIENT)
+	}
+	@SideOnly(Side.CLIENT)
     public void initModel() {
        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }

@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "particle": "btm:blocks/blocktexture",
-    "down": "btm:blocks/blocktexture",
-    "up": "btm:blocks/blocktexture",
-    "east": "btm:blocks/blocktexture",
-    "west": "btm:blocks/blocktexture",
-    "north": "btm:blocks/datablocktexture",
-    "south": "btm:blocks/blocktexture"
+    "particle": "btm:blocks/smoothobsidian",
+    "down": "btm:blocks/smoothobsidian",
+    "up": "btm:blocks/smoothobsidian",
+    "east": "btm:blocks/smoothobsidian",
+    "west": "btm:blocks/smoothobsidian",
+    "north": "btm:blocks/counterfront",
+    "south": "btm:blocks/smoothobsidian"
   }
 }

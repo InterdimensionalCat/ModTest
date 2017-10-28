@@ -4,6 +4,7 @@ import com.benthom123.test.modClass;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -12,6 +13,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -31,10 +33,13 @@ public class DataBlock extends Block implements ITileEntityProvider {
 
     public DataBlock() {
         super(Material.ROCK);
-        setUnlocalizedName(modClass.MODID + ".DataBlock");
+        setUnlocalizedName(modClass.MODID + ".datablock");
         setRegistryName("datablock");
         this.setCreativeTab(CreativeTabs.MISC);
+        
     }
+    
+    
 
     @SideOnly(Side.CLIENT)
     public void initModel() {
