@@ -1,5 +1,6 @@
 package com.benthom123.test.blocks;
 
+import com.benthom123.test.ModItems;
 import com.benthom123.test.modClass;
 
 import net.minecraft.block.Block;
@@ -16,7 +17,7 @@ public class FirstBlock extends Block {
         super(Material.ROCK);
         setUnlocalizedName(modClass.MODID + ".smoothobsidian");     // Used for localization (en_US.lang)
         setRegistryName("smoothobsidian");        // The unique name (within your mod) that identifies this block
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(ModItems.extraTools);
     }
     
     @SideOnly(Side.CLIENT)

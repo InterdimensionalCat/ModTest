@@ -6,8 +6,14 @@ language.code=en_us
 message.btm.counter_par=Counter: %d
 
 item.btm.obsidianingot.name=Obsidian Ingot
+item.btm.copperingot.name=Copper Ingot
 item.btm.obsidianpickaxe.name=Obsidian Pickaxe
 item.btm.obsidiansword.name=Obsidian Sword
+item.btm.obsidianaxe.name=Obsidian Axe
+item.btm.obsidianspade.name=Obsidian Shovel
+item.btm.obsidianhoe.name=Obsidian Hoe
+item.btm.deathscythe.name=Death Scythe
 
 tile.btm.datablock.name=Counter
 tile.btm.smoothobsidian.name=Smooth Obsidian
+tile.btm.copperore.name=Copper Ore

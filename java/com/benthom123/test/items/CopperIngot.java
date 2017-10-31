@@ -11,12 +11,12 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class FirstItem extends Item {
+public class CopperIngot extends Item {
 
-	public FirstItem() {
+	public CopperIngot() {
 
-		setRegistryName("obsidianingot");        // The unique name (within your mod) that identifies this item
-        setUnlocalizedName(modClass.MODID + ".obsidianingot");     // Used for localization (en_US.lang)
+		setRegistryName("copperingot");        // The unique name (within your mod) that identifies this item
+        setUnlocalizedName(modClass.MODID + ".copperingot");     // Used for localization (en_US.lang)
         this.setCreativeTab(ModItems.extraTools);
     }
     @SideOnly(Side.CLIENT)

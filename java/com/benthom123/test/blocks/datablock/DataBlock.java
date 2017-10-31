@@ -1,5 +1,6 @@
 package com.benthom123.test.blocks.datablock;
 
+import com.benthom123.test.ModItems;
 import com.benthom123.test.modClass;
 
 import net.minecraft.block.Block;
@@ -35,7 +36,7 @@ public class DataBlock extends Block implements ITileEntityProvider {
         super(Material.ROCK);
         setUnlocalizedName(modClass.MODID + ".datablock");
         setRegistryName("datablock");
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(ModItems.extraTools);
         
     }
     
