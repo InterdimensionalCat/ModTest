@@ -8,10 +8,14 @@ import com.benthom123.test.ModCrafting;
 import com.benthom123.test.ModItems;
 import com.benthom123.test.modClass;
 import com.benthom123.test.blocks.CopperOre;
+import com.benthom123.test.blocks.CopperBlock;
 import com.benthom123.test.blocks.FirstBlock;
 import com.benthom123.test.blocks.datablock.DataBlock;
 import com.benthom123.test.blocks.datablock.DataTileEntity;
 import com.benthom123.test.items.CopperIngot;
+import com.benthom123.test.items.CopperNugget;
+import com.benthom123.test.items.CopperPickaxe;
+import com.benthom123.test.items.CopperSword;
 import com.benthom123.test.items.DeathScythe;
 import com.benthom123.test.items.FirstItem;
 import com.benthom123.test.items.ObsidianAxe;
@@ -45,7 +49,7 @@ public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {
         File directory = e.getModConfigurationDirectory();
-        config = new Configuration(new File(directory.getPath(), "modtut.cfg"));
+        config = new Configuration(new File(directory.getPath(), "btm.cfg"));
         Config.readConfig();
     }
     public void init(FMLInitializationEvent e) {
@@ -58,7 +62,8 @@ public class CommonProxy {
     	 
     }
     
-    public static ToolMaterial OBSIDIAN = EnumHelper.addToolMaterial("OBSIDIAN", 3, 131, 24.0F, 4.0F, 5 );
+    public static ToolMaterial OBSIDIAN = EnumHelper.addToolMaterial("OBSIDIAN", 4, 3122, 5.0F, 4.0F, 5 );
+    public static ToolMaterial COPPER = EnumHelper.addToolMaterial("COPPER", 3, 175, 5.0F, 1.0F, 17 );
 	public static ToolMaterial DEATH = EnumHelper.addToolMaterial("DEATH", 1, 4, 1.0F, 1.0F,  1 );
 
     public void postInit(FMLPostInitializationEvent e) {
@@ -68,8 +73,11 @@ public class CommonProxy {
     public static void registerItems(RegistryEvent.Register<Item> event) {
     	  event.getRegistry().register(new FirstItem());
     	  event.getRegistry().register(new CopperIngot());
+    	  event.getRegistry().register(new CopperNugget());
     	  event.getRegistry().register(new ObsidianPickaxe("obsidianpickaxe", OBSIDIAN));
+    	  event.getRegistry().register(new CopperPickaxe("copperpickaxe", COPPER));
     	  event.getRegistry().register(new ObsidianSword("obsidiansword", OBSIDIAN));
+    	  event.getRegistry().register(new CopperSword("coppersword", COPPER));
     	  event.getRegistry().register(new ObsidianAxe("obsidianaxe", OBSIDIAN));
     	  event.getRegistry().register(new ObsidianSpade("obsidianspade", OBSIDIAN));
     	  event.getRegistry().register(new ObsidianHoe("obsidianhoe", OBSIDIAN));
@@ -77,6 +85,8 @@ public class CommonProxy {
     	  event.getRegistry().register(new ItemBlock(ModBlocks.DataBlock).setRegistryName(ModBlocks.DataBlock.getRegistryName()));
     	  event.getRegistry().register(new ItemBlock(ModBlocks.SmoothObsidian).setRegistryName(ModBlocks.SmoothObsidian.getRegistryName()));
     	  event.getRegistry().register(new ItemBlock(ModBlocks.CopperOre).setRegistryName(ModBlocks.CopperOre.getRegistryName()));
+    	  event.getRegistry().register(new ItemBlock(ModBlocks.CopperBlock).setRegistryName(ModBlocks.CopperBlock.getRegistryName()));
+    	  GameRegistry.registerTileEntity(DataTileEntity.class, modClass.MODID + "_datablock");
     }            
 
     
@@ -85,6 +95,6 @@ public class CommonProxy {
     	 event.getRegistry().register(new FirstBlock());
     	 event.getRegistry().register(new DataBlock());
     	 event.getRegistry().register(new CopperOre());
-    	 GameRegistry.registerTileEntity(DataTileEntity.class, modClass.MODID + "_datablock");
+    	 event.getRegistry().register(new CopperBlock());
     }
 }

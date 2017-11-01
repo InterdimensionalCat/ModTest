@@ -1,10 +1,14 @@
 package com.benthom123.test;
 
+import com.benthom123.test.blocks.CopperBlock;
 import com.benthom123.test.blocks.CopperOre;
 import com.benthom123.test.blocks.datablock.DataBlock;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.benthom123.test.items.CopperIngot;
+import com.benthom123.test.items.CopperNugget;
+import com.benthom123.test.items.CopperPickaxe;
+import com.benthom123.test.items.CopperSword;
 import com.benthom123.test.items.DeathScythe;
 import com.benthom123.test.items.FirstItem;
 import com.benthom123.test.items.ObsidianAxe;
@@ -24,45 +28,57 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
 	
-	public static ToolMaterial OBSIDIAN = EnumHelper.addToolMaterial("OBSIDIAN", 3, 131, 24.0F, 4.0F,  5 );
-	public static ToolMaterial DEATH = EnumHelper.addToolMaterial("DEATH", 1, 4, 1.0F, 1.0F,  1 );
 	
 	public static CreativeTabs extraTools = new ModTabs(CreativeTabs.getNextID(), "Extra Tools");
 	
     @ObjectHolder("btm:obsidianingot")
-    public static FirstItem ObsidianIngot = new FirstItem();
+    public static FirstItem ObsidianIngot;
     
     @ObjectHolder("btm:copperingot")
-    public static CopperIngot copperingot = new CopperIngot();
+    public static CopperIngot copperingot;
+    
+    @ObjectHolder("btm:coppernugget")
+    public static CopperNugget coppernugget;
      
     @ObjectHolder("btm:datablock")
-    public static DataBlock DataBlock = new DataBlock();
+    public static DataBlock DataBlock;
     
     @ObjectHolder("btm:copperore")
-    public static CopperOre CopperOre = new CopperOre();
+    public static CopperOre CopperOre;
+    
+    @ObjectHolder("btm:copperblock")
+    public static CopperBlock CopperBlock;
     
     @ObjectHolder("btm:obsidianpickaxe")
-    public static ObsidianPickaxe obsidianpickaxe = new ObsidianPickaxe("obsidianpickaxe", OBSIDIAN);
+    public static ObsidianPickaxe obsidianpickaxe;
+    
+    @ObjectHolder("btm:copperpickaxe")
+    public static CopperPickaxe copperpickaxe;
     
     @ObjectHolder("btm:obsidiansword")
-    public static ObsidianSword obsidiansword = new ObsidianSword("obsidiansword", OBSIDIAN);
+    public static ObsidianSword obsidiansword;
+    
+    @ObjectHolder("btm:coppersword")
+    public static CopperSword coppersword;
    
     @ObjectHolder("btm:obsidianaxe")
-    public static ObsidianAxe obsidianaxe = new ObsidianAxe("obsidianaxe", OBSIDIAN);
+    public static ObsidianAxe obsidianaxe;
     
     @ObjectHolder("btm:obsidianspade")
-    public static ObsidianSpade obsidianspade = new ObsidianSpade("obsidianspade", OBSIDIAN);
+    public static ObsidianSpade obsidianspade;
     
     @ObjectHolder("btm:obsidianhoe")
-    public static ObsidianHoe obsidianhoe = new ObsidianHoe("obsidianhoe", OBSIDIAN);
+    public static ObsidianHoe obsidianhoe;
     
     @ObjectHolder("btm:deathscythe")
-    public static DeathScythe deathscythe = new DeathScythe("obsidianhoe", DEATH, ObsidianIngot	 );
+    public static DeathScythe deathscythe;
     
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         DataBlock.initModel();
         ObsidianIngot.initModel();
+        CopperOre.initModel();  
+        CopperBlock.initModel();
         obsidianpickaxe.initModel();
         obsidiansword.initModel();
         obsidianaxe.initModel();
@@ -70,7 +86,9 @@ public class ModItems {
         obsidianhoe.initModel();
         deathscythe.initModel();
         copperingot.initModel();
-        CopperOre.initModel();    
+        coppernugget.initModel();
+        copperpickaxe.initModel();
+        coppersword.initModel();
     }
     
 }

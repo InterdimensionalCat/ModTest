@@ -1,6 +1,7 @@
 package com.benthom123.test.blocks;
 
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import com.benthom123.test.ModBlocks;
@@ -15,6 +16,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -22,17 +26,16 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class CopperOre extends Block {
 	
-	private Item drop;
-	private int least_quantity;
-	private int most_quantity;
-	private int meta;
-
+    @Override
+    public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState blockstate, int fortune) {
+        ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
+        drops.add(new ItemStack(ModItems.coppernugget, RANDOM.nextInt(5) + 2));
+        if (RANDOM.nextFloat() < 0.1F)
+            drops.add(new ItemStack(ModItems.copperingot));
+        return drops;
+    }
 	    public CopperOre() {
 	        super(Material.ROCK);
-	        this.drop = ModItems.copperingot;
-	        this.least_quantity = 1;
-	        this.most_quantity = 3;
-	        this.meta = 0;
 	        this.setHarvestLevel("pickaxe", 2 );
 	        this.setHardness(3.0F);
 	        this.setResistance(15.0f);
@@ -41,25 +44,7 @@ public class CopperOre extends Block {
 	        this.setCreativeTab(ModItems.extraTools);
 	        
 	    }
-	        
-	        @Override
-	        public Item getItemDropped(IBlockState blockstate, Random random, int fortune) {
-	            return this.drop;
-	        }
-	        
-	        @Override
-	        public int damageDropped(IBlockState blockstate) {
-	            return this.meta;
-	        }
 
-	        @Override
-	        public int quantityDropped(IBlockState blockstate, int fortune, Random random) {
-	            if (this.least_quantity >= this.most_quantity)
-	                return this.least_quantity;
-	            return this.least_quantity + random.nextInt(this.most_quantity - this.least_quantity + fortune + 1);
-	        }
-	        
-	    
 	    @SideOnly(Side.CLIENT)
 	    public void initModel() {
 	        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));

@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "btm:copperblock"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

@@ -14,6 +14,10 @@ public class ModCrafting {
 	GameRegistry.addShapedRecipe(new ResourceLocation("btm:obsidianaxe"), new ResourceLocation("btm:obsidianingot"), new ItemStack(ModItems.obsidianaxe), new Object[] {" XX"," IX"," I ", 'X', ModItems.ObsidianIngot, 'I', Items.STICK});
 	GameRegistry.addShapedRecipe(new ResourceLocation("btm:obsidianspade"), new ResourceLocation("btm:obsidianingot"), new ItemStack(ModItems.obsidianspade), new Object[] {" X "," I "," I ", 'X', ModItems.ObsidianIngot, 'I', Items.STICK});
 	GameRegistry.addShapedRecipe(new ResourceLocation("btm:obsidianhoe"), new ResourceLocation("btm:obsidianingot"), new ItemStack(ModItems.obsidianhoe), new Object[] {" XX"," I "," I ", 'X', ModItems.ObsidianIngot, 'I', Items.STICK});
+	GameRegistry.addShapedRecipe(new ResourceLocation("btm:copperingot"), new ResourceLocation("btm:coppernugget"), new ItemStack(ModItems.copperingot, 2), new Object[] {"XXX","XXX","XXX", 'X', ModItems.coppernugget,});
+	GameRegistry.addShapedRecipe(new ResourceLocation("btm:copperblock"), new ResourceLocation("btm:copperingot"), new ItemStack(ModBlocks.CopperBlock, 2), new Object[] {"XXX","XXX","XXX", 'X', ModItems.copperingot,});
+	GameRegistry.addShapedRecipe(new ResourceLocation("btm:copperpickaxe"), new ResourceLocation("btm:copperingot"), new ItemStack(ModItems.copperpickaxe), new Object[] {"XXX"," I "," I ", 'X', ModItems.copperingot, 'I', Items.STICK});
+	GameRegistry.addShapedRecipe(new ResourceLocation("btm:coppersword"), new ResourceLocation("btm:copperingot"), new ItemStack(ModItems.coppersword), new Object[] {" X "," X "," I ", 'X', ModItems.copperingot, 'I', Items.STICK});
 	}
 	public static void registerSmelting()
 	{

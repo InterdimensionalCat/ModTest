@@ -8,11 +8,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class FirstBlock extends Block {
+public class FirstBlock extends Block  {
     public FirstBlock() {
         super(Material.ROCK);
         setUnlocalizedName(modClass.MODID + ".smoothobsidian");     // Used for localization (en_US.lang)
