@@ -26,7 +26,7 @@ public class CopperPickaxe extends ItemTool {
 
 	public CopperPickaxe(String registryName, ToolMaterial material) {
         super(attack_damage, attack_speed, material, Collections.emptySet());
-		this.repairItem = ModItems.ObsidianIngot;
+		this.repairItem = ModItems.copperingot;
         this.setHarvestLevel("pickaxe", material.getHarvestLevel());
 		setRegistryName(registryName);     
         setUnlocalizedName(modClass.MODID + "." + registryName);

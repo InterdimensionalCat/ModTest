@@ -5,6 +5,7 @@ import com.benthom123.test.blocks.CopperOre;
 import com.benthom123.test.blocks.datablock.DataBlock;
 import net.minecraftforge.common.util.EnumHelper;
 
+import com.benthom123.test.items.CopperHoe;
 import com.benthom123.test.items.CopperIngot;
 import com.benthom123.test.items.CopperNugget;
 import com.benthom123.test.items.CopperPickaxe;
@@ -70,6 +71,9 @@ public class ModItems {
     @ObjectHolder("btm:obsidianhoe")
     public static ObsidianHoe obsidianhoe;
     
+    @ObjectHolder("btm:copperhoe")
+    public static CopperHoe copperhoe;
+    
     @ObjectHolder("btm:deathscythe")
     public static DeathScythe deathscythe;
     
@@ -89,6 +93,7 @@ public class ModItems {
         coppernugget.initModel();
         copperpickaxe.initModel();
         coppersword.initModel();
+        copperhoe.initModel();
     }
     
 }

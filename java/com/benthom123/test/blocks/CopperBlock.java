@@ -1,5 +1,7 @@
 package com.benthom123.test.blocks;
 
+import javax.annotation.Nullable;
+
 import com.benthom123.test.ModItems;
 import com.benthom123.test.modClass;
 
@@ -30,6 +32,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class CopperBlock extends Block {
+	
+	boolean canActivate = false;
+	boolean isActivated = false;
 
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
@@ -43,18 +48,48 @@ public class CopperBlock extends Block {
     @Override
     public int getWeakPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
     {
+    	if (isActivated = true) {
         return 15;
+    	}
+    	else
+    		return 0;
     }
     
     @Override
     public boolean canProvidePower(IBlockState state)
     {
+    	if (isActivated = true)
         return true;
+    	else
+    		return false;
     }
     
     @SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    }
+    
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state)
+    {
+        	if (canActivate) {
+        		isActivated = true;
+        	}
+    	return true;
+    }
+    
+    @Override
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
+    {
+    	if(worldIn.isBlockIndirectlyGettingPowered(fromPos) > 0) {
+    	canActivate = true;
+    	onBlockActivated(worldIn, pos, state);
+    	}
+    }
+    
+    @Override
+    public boolean canConnectRedstone(IBlockState state, IBlockAccess world, BlockPos pos, @Nullable EnumFacing side)
+    {
+        return true;
     }
 
 }

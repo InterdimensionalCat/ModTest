@@ -12,6 +12,7 @@ import com.benthom123.test.blocks.CopperBlock;
 import com.benthom123.test.blocks.FirstBlock;
 import com.benthom123.test.blocks.datablock.DataBlock;
 import com.benthom123.test.blocks.datablock.DataTileEntity;
+import com.benthom123.test.items.CopperHoe;
 import com.benthom123.test.items.CopperIngot;
 import com.benthom123.test.items.CopperNugget;
 import com.benthom123.test.items.CopperPickaxe;
@@ -81,6 +82,7 @@ public class CommonProxy {
     	  event.getRegistry().register(new ObsidianAxe("obsidianaxe", OBSIDIAN));
     	  event.getRegistry().register(new ObsidianSpade("obsidianspade", OBSIDIAN));
     	  event.getRegistry().register(new ObsidianHoe("obsidianhoe", OBSIDIAN));
+    	  event.getRegistry().register(new CopperHoe("copperhoe", COPPER));
     	  event.getRegistry().register(new DeathScythe("deathscythe", DEATH, ModItems.ObsidianIngot));
     	  event.getRegistry().register(new ItemBlock(ModBlocks.DataBlock).setRegistryName(ModBlocks.DataBlock.getRegistryName()));
     	  event.getRegistry().register(new ItemBlock(ModBlocks.SmoothObsidian).setRegistryName(ModBlocks.SmoothObsidian.getRegistryName()));

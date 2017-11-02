@@ -29,7 +29,7 @@ public class CopperSword extends ItemTool {
 
 	public CopperSword(String registryName, ToolMaterial material) {
         super(attack_damage, attack_speed, material, Collections.emptySet());
-		this.repairItem = ModItems.ObsidianIngot;
+		this.repairItem = ModItems.copperingot;
 		setRegistryName(registryName);     
         setUnlocalizedName(modClass.MODID + "." + registryName);
         this.setCreativeTab(ModItems.extraTools);

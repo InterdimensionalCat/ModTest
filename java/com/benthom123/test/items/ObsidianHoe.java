@@ -2,9 +2,13 @@ package com.benthom123.test.items;
 
 import com.benthom123.test.ModItems;
 import com.benthom123.test.modClass;
+import com.google.common.collect.Multimap;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemHoe;
@@ -29,9 +33,5 @@ public class ObsidianHoe extends ItemHoe {
     public void initModel() {
        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
-	
-	 @Override
-	    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-	        return repair.getItem() == ModItems.ObsidianIngot ? true : super.getIsRepairable(toRepair, repair);
-	    }
 }
+	
