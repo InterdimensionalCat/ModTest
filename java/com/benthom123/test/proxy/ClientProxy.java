@@ -1,6 +1,7 @@
 package com.benthom123.test.proxy;
 
 import com.benthom123.test.ModBlocks;
+import com.benthom123.test.ModEntities;
 import com.benthom123.test.ModItems;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -13,13 +14,15 @@ import net.minecraftforge.fml.relauncher.Side;
 public class ClientProxy extends CommonProxy {
     @Override
     public void preInit(FMLPreInitializationEvent e) {
-        super.preInit(e);
+        super.preInit(e);;
     }
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
     	ModBlocks.initModels();
         ModItems.initModels();
+        ModEntities.init();
+        ModEntities.initModels();
     }
     
 }

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.benthom123.test.proxy.CommonProxy;
 
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,10 +27,16 @@ public class modClass {
 
     public static Logger logger;
 
+    static {
+    	FluidRegistry.enableUniversalBucket();
+    }
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
         proxy.preInit(event);
+        FluidRegistry.addBucketForFluid(FluidRegistry.WATER);
+        FluidRegistry.addBucketForFluid(FluidRegistry.LAVA);
         
     }
 

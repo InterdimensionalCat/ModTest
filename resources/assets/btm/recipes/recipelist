@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "btm:obsidianpickaxe"
+  },
+  "pattern": [
+    "iii",
+    " e ",
+    " e "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "i": {
+      "type": "forge:ore_dict",
+      "ore": "btm:obsidianingot"
+    },
+    "e": {
+      "item": "minecraft:stick"
+    }
+  }
+}

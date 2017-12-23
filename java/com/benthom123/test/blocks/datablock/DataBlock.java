@@ -1,9 +1,11 @@
 package com.benthom123.test.blocks.datablock;
 
+import com.benthom123.test.ModItems;
 import com.benthom123.test.modClass;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -12,6 +14,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -31,10 +34,15 @@ public class DataBlock extends Block implements ITileEntityProvider {
 
     public DataBlock() {
         super(Material.ROCK);
-        setUnlocalizedName(modClass.MODID + ".DataBlock");
-        setRegistryName("DataBlock");
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setHardness(50.0F);
+        this.setResistance(2000.0f);
+        setUnlocalizedName(modClass.MODID + ".datablock");
+        setRegistryName("datablock");
+        this.setCreativeTab(ModItems.extraTools);
+        
     }
+    
+    
 
     @SideOnly(Side.CLIENT)
     public void initModel() {
@@ -63,7 +71,7 @@ public class DataBlock extends Block implements ITileEntityProvider {
                 } else {
                     counter = getTE(world, pos).increment();
                 }
-                TextComponentTranslation component = new TextComponentTranslation("message.modClass.counter_par", counter);
+                TextComponentTranslation component = new TextComponentTranslation("message.btm.counter_par", counter);
                 component.getStyle().setColor(TextFormatting.GREEN);
                 player.sendStatusMessage(component, false);
             }
@@ -96,3 +104,4 @@ public class DataBlock extends Block implements ITileEntityProvider {
     }
 
 }
+  	
