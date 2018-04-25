@@ -29,14 +29,14 @@ public class CopperOre extends Block {
     @Override
     public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState blockstate, int fortune) {
         ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
-        drops.add(new ItemStack(ModItems.coppernugget, RANDOM.nextInt(5) + 2));
-        if (RANDOM.nextFloat() < 0.1F)
+        drops.add(new ItemStack(ModItems.coppernugget, RANDOM.nextInt(5) + 2)); //drops between 5 and 2 nuggets everytime with no fortune
+        if (RANDOM.nextFloat() < 0.1F) //gives a one in ten chance of dropping a copper ingot
             drops.add(new ItemStack(ModItems.copperingot));
         return drops;
     }
 	    public CopperOre() {
 	        super(Material.ROCK);
-	        this.setHarvestLevel("pickaxe", 2 );
+	        this.setHarvestLevel("pickaxe", 0 );
 	        this.setHardness(3.0F);
 	        this.setResistance(15.0f);
 	        setUnlocalizedName(modClass.MODID + ".copperore");     // Used for localization (en_US.lang)

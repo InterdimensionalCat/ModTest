@@ -34,6 +34,8 @@ public class DataBlock extends Block implements ITileEntityProvider {
 
     public DataBlock() {
         super(Material.ROCK);
+        this.setHardness(50.0F);
+        this.setResistance(2000.0f);
         setUnlocalizedName(modClass.MODID + ".datablock");
         setRegistryName("datablock");
         this.setCreativeTab(ModItems.extraTools);

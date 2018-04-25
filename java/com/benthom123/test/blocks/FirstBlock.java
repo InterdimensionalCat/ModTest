@@ -16,6 +16,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class FirstBlock extends Block  {
     public FirstBlock() {
         super(Material.ROCK);
+        this.setHardness(50.0F);
+        this.setResistance(2000.0f);
+        this.setHarvestLevel("pickaxe", 3);
         setUnlocalizedName(modClass.MODID + ".smoothobsidian");     // Used for localization (en_US.lang)
         setRegistryName("smoothobsidian");        // The unique name (within your mod) that identifies this block
         this.setCreativeTab(ModItems.extraTools);

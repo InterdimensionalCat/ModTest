@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "btm:items/obsidianhoe"
+    "layer0": "btm:items/copperhoe"
   }
 }
